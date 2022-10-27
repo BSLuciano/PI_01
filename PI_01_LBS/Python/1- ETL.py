@@ -7,23 +7,23 @@ import re
 
 # carga de archivos
 
-path = r'C:\Users\barce\OneDrive\Escritorio\HENRY\HENRY_Course\1- Data_Science\Proyectos\1- Individual\PI - 1\PI01_DATA_ENGINEERING-main\Datasets\precios_semanas_20200419_20200426.xlsx'
+path = r'C:\Users\barce\OneDrive\Escritorio\HENRY\HENRY_Course\1- Data_Science\Proyectos\1- Individual\PI - 1\PI01_DATA_ENGINEERING-main\PI_01\Datasets\precios_semanas_20200419_20200426.xlsx'
 df_1 = pd.read_excel(path, sheet_name= None)
 
 df_1_h1 = df_1['precios_20200426_20200426']
 df_1_h2 = df_1['precios_20200419_20200419']
 
-path_2 = r'C:\Users\barce\OneDrive\Escritorio\HENRY\HENRY_Course\1- Data_Science\Proyectos\1- Individual\PI - 1\PI01_DATA_ENGINEERING-main\Datasets\precios_semana_20200413.csv' 
+path_2 = r'C:\Users\barce\OneDrive\Escritorio\HENRY\HENRY_Course\1- Data_Science\Proyectos\1- Individual\PI - 1\PI01_DATA_ENGINEERING-main\PI_01\Datasets\precios_semana_20200413.csv' 
 df_2 = pd.read_csv(path_2, encoding='utf-16-le', sep=',')
 
-path_3 = r'C:\Users\barce\OneDrive\Escritorio\HENRY\HENRY_Course\1- Data_Science\Proyectos\1- Individual\PI - 1\PI01_DATA_ENGINEERING-main\Datasets\precios_semana_20200503.json'
+path_3 = r'C:\Users\barce\OneDrive\Escritorio\HENRY\HENRY_Course\1- Data_Science\Proyectos\1- Individual\PI - 1\PI01_DATA_ENGINEERING-main\PI_01\Datasets\precios_semana_20200503.json'
 df_3 = pd.read_json(path_3)
 
 
-path_5 = r'C:\Users\barce\OneDrive\Escritorio\HENRY\HENRY_Course\1- Data_Science\Proyectos\1- Individual\PI - 1\PI01_DATA_ENGINEERING-main\Datasets\producto.parquet'
+path_5 = r'C:\Users\barce\OneDrive\Escritorio\HENRY\HENRY_Course\1- Data_Science\Proyectos\1- Individual\PI - 1\PI01_DATA_ENGINEERING-main\PI_01\Datasets\producto.parquet'
 df_producto = pd.read_parquet(path_5, engine='pyarrow')
 
-path_6 = r'C:\Users\barce\OneDrive\Escritorio\HENRY\HENRY_Course\1- Data_Science\Proyectos\1- Individual\PI - 1\PI01_DATA_ENGINEERING-main\Datasets\sucursal.csv'
+path_6 = r'C:\Users\barce\OneDrive\Escritorio\HENRY\HENRY_Course\1- Data_Science\Proyectos\1- Individual\PI - 1\PI01_DATA_ENGINEERING-main\PI_01\Datasets\sucursal.csv'
 df_sucursal = pd.read_csv(path_6, sep=',')
 
 # Eliminar duplicados

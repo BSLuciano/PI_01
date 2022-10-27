@@ -3,7 +3,7 @@ import os
 import re
 from ruta import *
 
-def incremental(path):
+def carga(path):
     df_precio = pd.read_csv(f'{path}',  sep= '|')
     df_precio.drop_duplicates(inplace=True)
     df_precio.fillna(0, inplace=True)
@@ -38,4 +38,4 @@ def incremental(path):
     
   
 
-incremental(r'C:\Users\barce\OneDrive\Escritorio\HENRY\HENRY_Course\1- Data_Science\Proyectos\1- Individual\PI - 1\PI01_DATA_ENGINEERING-main\Datasets\precios_semana_20200518.txt')
+carga(r'C:\Users\barce\OneDrive\Escritorio\HENRY\HENRY_Course\1- Data_Science\Proyectos\1- Individual\PI - 1\PI01_DATA_ENGINEERING-main\PI_01\Datasets\precios_semana_20200518.txt')

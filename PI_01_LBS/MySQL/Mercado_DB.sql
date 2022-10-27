@@ -43,16 +43,15 @@ FIELDS TERMINATED BY ',' ENCLOSED BY '"' ESCAPED BY ''
 LINES TERMINATED BY '\n' IGNORE 1 LINES;
 
 
-set foreign_key_checks = 0;
+#set foreign_key_checks = 0;
 DROP TABLE IF EXISTS `precio`;
 CREATE TABLE IF NOT EXISTS `precio` (
   	`Precio` 		decimal(20,2),
     `IdProducto` 	VARCHAR(25),
   	`IdSucursal` 	VARCHAR(80),
-  	`fecha_semana`  int,
-    
-    FOREIGN KEY (IdProducto) REFERENCES producto(IdProducto),
-    FOREIGN KEY (IdSucursal) REFERENCES sucursal(IdSucursal)
+  	`fecha_semana`  int
+#    FOREIGN KEY (IdProducto) REFERENCES producto(IdProducto),
+#    FOREIGN KEY (IdSucursal) REFERENCES sucursal(IdSucursal)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 LOAD DATA INFILE 'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\PI-01\\precios_semana_20200413_mod.csv'
@@ -74,6 +73,4 @@ LOAD DATA INFILE 'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\PI-01\\prec
 INTO TABLE `precio` 
 FIELDS TERMINATED BY ',' ENCLOSED BY '' ESCAPED BY '' 
 LINES TERMINATED BY '\n' IGNORE 1 LINES;
-
-set foreign_key_checks = 1
 
