@@ -8,3 +8,5 @@ de realizar las tareas de extración, limpieza, transformación y carga del
 dato, para ello el programa recibe como parámetro el path de un archivo,
 ejecuta todas las sentencias que pesenta y por medio de una conexión creada
 con MySQL utilizando sqlalchemy, lo carga a la base de datos.
+
+Los detalles se encuentran en el notebook.
