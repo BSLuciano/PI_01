@@ -1,0 +1,10 @@
+pipeline ETL
+
+Utilización de Python, Pandas, SQLalchemy y MySQL
+
+El modelo logrado realiza el proceso de ETL de manera automática, por
+medio de la implementación de una función compuesta de funciones encargadas
+de realizar las tareas de extración, limpieza, transformación y carga del
+dato, para ello el programa recibe como parámetro el path de un archivo,
+ejecuta todas las sentencias que pesenta y por medio de una conexión creada
+con MySQL utilizando sqlalchemy, lo carga a la base de datos.
